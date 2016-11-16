@@ -27,6 +27,12 @@
   -moz-align-items: center;
   align-items: center; }
 
+.cp-grid[data-cp-grid-align="baseline"] {
+  -ms-flex-align: baseline;
+  -webkit-align-items: baseline;
+  -moz-align-items: baseline;
+  align-items: baseline; }
+
 .cp-grid-item[data-cp-grid-align="top"] {
   -ms-flex-item-align: start;
   -webkit-align-self: flex-start;

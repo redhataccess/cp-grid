@@ -25,20 +25,131 @@
 		max-width: 1170px;
 	}
 
+	p { margin: 0 0 1em; }
+
 	h1 { font-size: 36px; margin: 0 0 1em; font-weight: normal; }
 	h2 { font-size: 28px; margin: 0; font-weight: normal; }
-	h3 { font-size: 21px; margin: 2em 0 0; font-weight: normal; }
+	h3 { font-size: 21px; margin: 2em 0 1em; font-weight: normal; }
+
+	section {
+		margin: 0 0 30px;
+		border-top: 1px solid #ccc;
+		padding-top: 30px;
+	}
 	</style>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 </head>
 <body>
 	<div class="container">
 
-		<h1>Customer Portal Grid System Demo
-		<h2>Standard Grid</h2>
-		<p>You can assign the column/grid widths directly to the grid wrapper itself using the data attribute <code>data-cp-grid</code>. Breakpoints work similarly to Bootstrap.</p>
+		<h1>Customer Portal Grid System Demo</h1>
 
-		<h3 class="subheading subheading-sm">Markup:</h3>
-		<pre class="code-block"><code class="language-markup">&lt;div class="cp-grid" data-cp-grid="sm-2 md-4"&gt;
+		<section>
+			<h2>Standard Grid</h2>
+			<p>You can assign the column/grid widths directly to the grid wrapper itself using the data attribute <code>data-cp-grid</code>. Breakpoints work similarly to Bootstrap.</p>
+
+			<h3 class="subheading subheading-sm">Markup:</h3>
+			<pre class="code-block"><code class="language-markup">&lt;div class="cp-grid" data-cp-grid="sm-2 md-4"&gt;
+		&lt;div class="cp-grid-item"&gt;&lt;/div&gt;
+		&lt;div class="cp-grid-item"&gt;&lt;/div&gt;
+		&lt;div class="cp-grid-item"&gt;&lt;/div&gt;
+		&lt;div class="cp-grid-item"&gt;&lt;/div&gt;
+	&lt;/div&gt;</code></pre>
+
+
+			<h3>Example:</h3>
+			<div class="cp-grid" data-cp-grid="sm-2 md-4">
+				<div class="cp-grid-item">
+				  <p>Bacon ipsum dolor amet ribeye tongue short loin fatback. Ham sausage drumstick shoulder biltong. Shank boudin capicola, hamburger pancetta ham flank biltong alcatra spare ribs. Burgdoggen bresaola boudin meatloaf pig. Pig ball tip brisket, filet mignon ribeye doner tail drumstick spare ribs shoulder short loin venison.</p>
+				</div>
+				<div class="cp-grid-item">
+				  <p>Beef jerky venison pastrami bacon jowl andouille alcatra drumstick ground round pork turkey. Cow bacon venison andouille, chuck shank strip steak boudin tail short ribs spare ribs. Frankfurter doner kevin meatball, rump pork loin tail tri-tip brisket fatback swine pancetta beef ribs ham. Capicola ham pork, jerky prosciutto beef ribs cupim pig.</p>
+				</div>
+				<div class="cp-grid-item">
+				  <p>Beef turkey ground round strip steak fatback prosciutto hamburger salami. Corned beef doner chuck, beef ribs chicken porchetta meatball alcatra. Meatball ham fatback landjaeger short ribs shankle pork chop shank meatloaf frankfurter sausage picanha flank strip steak.</p>
+				</div>
+				<div class="cp-grid-item">
+				  <p>Shankle ground round hamburger, cupim venison pastrami short ribs picanha turkey tri-tip t-bone cow ham hock. Beef ribs turducken kielbasa cupim porchetta short loin. Chicken bacon cow burgdoggen short loin, doner beef ribs rump tongue kielbasa andouille.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h2>Grid with Cards</h2>
+			<p>The truth is, you don't need cards anymore. The grid can have backgrounds now. By adding the data attribute <code>data-cp-grid-bg</code> you can select from any of the Brand-approved card colors:</p>
+			<ul>
+				<li><code>none</code> &#8212; this will add the necessary padding, but with a transparent background.</li>
+				<li><code>light-grey</code></li>
+				<li><code>medium-grey</code></li>
+				<li><code>dark-grey</code></li>
+				<li><code>bordered</code></li>
+			</ul>
+
+			<h3>Markup:</h3>
+			<pre class="code-block"><code class="language-markup">&lt;div class="cp-grid" data-cp-grid="sm-2 md-4"&gt;
+	&lt;div class="cp-grid-item" data-cp-grid-bg="light-grey"&gt;&lt;/div&gt;
+	&lt;div class="cp-grid-item" data-cp-grid-bg="light-grey"&gt;&lt;/div&gt;
+	&lt;div class="cp-grid-item" data-cp-grid-bg="none"&gt;&lt;/div&gt;
+	&lt;div class="cp-grid-item" data-cp-grid-bg="bordered"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+			<h3 class="subheading subheading-sm push-bottom push-top-wide">Example:</h3>
+			<div class="cp-grid" data-cp-grid="sm-2 md-4">
+				<div class="cp-grid-item" data-cp-grid-bg="light-grey">
+					<p>Bacon ipsum dolor amet ribeye tongue short loin fatback. Ham sausage drumstick shoulder biltong. Shank boudin capicola, hamburger pancetta ham flank biltong alcatra spare ribs. Burgdoggen bresaola boudin meatloaf pig. Pig ball tip brisket, filet mignon ribeye doner tail drumstick spare ribs shoulder short loin venison.</p>
+				</div>
+				<div class="cp-grid-item" data-cp-grid-bg="light-grey">
+					<p>Beef jerky venison pastrami bacon jowl andouille alcatra drumstick ground round pork turkey. Cow bacon venison andouille, chuck shank strip steak boudin tail short ribs spare ribs. Frankfurter doner kevin meatball, rump pork loin tail tri-tip brisket fatback swine pancetta beef ribs ham. Capicola ham pork, jerky prosciutto beef ribs cupim pig.</p>
+				</div>
+				<div class="cp-grid-item" data-cp-grid-bg="none">
+					<p>Beef turkey ground round strip steak fatback prosciutto hamburger salami. Corned beef doner chuck, beef ribs chicken porchetta meatball alcatra. Meatball ham fatback landjaeger short ribs shankle pork chop shank meatloaf frankfurter sausage picanha flank strip steak.</p>
+				</div>
+				<div class="cp-grid-item" data-cp-grid-bg="bordered">
+					<p>Shankle ground round hamburger, cupim venison pastrami short ribs picanha turkey tri-tip t-bone cow ham hock. Beef ribs turducken kielbasa cupim porchetta short loin. Chicken bacon cow burgdoggen short loin, doner beef ribs rump tongue kielbasa andouille.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h2>Grid with Varying Widths</h2>
+			<p>By adding the data attribute <code>data-cp-grid-size</code> you can adjust individual <code>cp-grid-item</code> widths. The values work similarly to Bootstrap as well.</p>
+			<p>Note: These will only override their respective grid wrapper size. Therefore, if you have a value of <code>md-4</code> on the wrapper, you will need a value on the <code>cp-grid-item</code> to override this.</p>
+
+			<h3>Markup:</h3>
+			<pre class="code-block"><code class="language-markup">&lt;div class="cp-grid" data-cp-grid="sm-2 md-4"&gt;
+	&lt;div class="cp-grid-item" data-cp-grid-bg="light-grey" data-cp-grid-size="sm-12-cols md-6-cols"&gt;&lt;/div&gt;
+	&lt;div class="cp-grid-item" data-cp-grid-bg="light-grey"&gt;&lt;/div&gt;
+	&lt;div class="cp-grid-item" data-cp-grid-bg="light-grey"&gt;&lt;/div&gt;
+	&lt;div class="cp-grid-item" data-cp-grid-bg="light-grey"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+			<h3 class="subheading subheading-sm push-bottom push-top-wide">Example:</h3>
+			<div class="cp-grid" data-cp-grid="sm-2 md-4">
+				<div class="cp-grid-item" data-cp-grid-bg="light-grey" data-cp-grid-size="sm-12-cols md-6-cols">
+				  <p>Bacon ipsum dolor amet ribeye tongue short loin fatback. Ham sausage drumstick shoulder biltong. Shank boudin capicola, hamburger pancetta ham flank biltong alcatra spare ribs. Burgdoggen bresaola boudin meatloaf pig. Pig ball tip brisket, filet mignon ribeye doner tail drumstick spare ribs shoulder short loin venison.</p>
+				</div>
+				<div class="cp-grid-item" data-cp-grid-bg="light-grey">
+				  <p>Beef jerky venison pastrami bacon jowl andouille alcatra drumstick ground round pork turkey. Cow bacon venison andouille, chuck shank strip steak boudin tail short ribs spare ribs. Frankfurter doner kevin meatball, rump pork loin tail tri-tip brisket fatback swine pancetta beef ribs ham. Capicola ham pork, jerky prosciutto beef ribs cupim pig.</p>
+				</div>
+				<div class="cp-grid-item" data-cp-grid-bg="light-grey">
+				  <p>Beef turkey ground round strip steak fatback prosciutto hamburger salami. Corned beef doner chuck, beef ribs chicken porchetta meatball alcatra. Meatball ham fatback landjaeger short ribs shankle pork chop shank meatloaf frankfurter sausage picanha flank strip steak.</p>
+				</div>
+				<div class="cp-grid-item" data-cp-grid-bg="light-grey">
+				  <p>Shankle ground round hamburger, cupim venison pastrami short ribs picanha turkey tri-tip t-bone cow ham hock. Beef ribs turducken kielbasa cupim porchetta short loin. Chicken bacon cow burgdoggen short loin, doner beef ribs rump tongue kielbasa andouille.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h2 class="section-title section-title-red">Grid with Alignment</h2>
+			<p>By adding the data attribute <code>data-cp-grid-align</code> to the wrapper you can vertically align all the elements. Or, you may choose to align only an individual element.</p>
+			<p>Note: EqualHeights (or "stretching") cannot be used alongside vertical alignment. This is the nature of Flexbox.</p>
+
+			<h3 class="subheading subheading-sm">Markup:</h3>
+			<pre class="code-block"><code class="language-markup">&lt;div class="cp-grid" data-cp-grid="sm-2 md-4" data-cp-grid-align="middle"&gt;
 	&lt;div class="cp-grid-item"&gt;&lt;/div&gt;
 	&lt;div class="cp-grid-item"&gt;&lt;/div&gt;
 	&lt;div class="cp-grid-item"&gt;&lt;/div&gt;
@@ -46,24 +157,41 @@
 &lt;/div&gt;</code></pre>
 
 
-		<h3>Example:</h3>
-		<div class="cp-grid" data-cp-grid="sm-2 md-4">
-			<div class="cp-grid-item">
-			  <p>Bacon ipsum dolor amet ribeye tongue short loin fatback. Ham sausage drumstick shoulder biltong. Shank boudin capicola, hamburger pancetta ham flank biltong alcatra spare ribs. Burgdoggen bresaola boudin meatloaf pig. Pig ball tip brisket, filet mignon ribeye doner tail drumstick spare ribs shoulder short loin venison.</p>
+			<h3 class="subheading subheading-sm push-bottom push-top-wide">Example:</h3>
+			<p class="push-bottom-wide">
+				<label for="alignment-select">Change alignment</label>
+				<select id="alignment-select">
+				  <option value="middle">Middle</option>
+				  <option value="top">Top</option>
+				  <option value="bottom">Bottom</option>
+				  <option value="baseline">Baseline</option>
+				  <option value="stretch">Stretch (default)</option>
+				</select>
+			</p>
+
+			<div id="alignment-example" class="cp-grid" data-cp-grid="sm-2 md-4" data-cp-grid-align="middle">
+				<div class="cp-grid-item" data-cp-grid-bg="light-grey">
+				  <p>Bacon ipsum dolor amet ribeye tongue short loin fatback. Ham sausage drumstick shoulder biltong. Shank boudin capicola, hamburger pancetta ham flank biltong alcatra spare ribs. Burgdoggen bresaola boudin meatloaf pig. Pig ball tip brisket, filet mignon ribeye doner tail drumstick spare ribs shoulder short loin venison.</p>
+				</div>
+				<div class="cp-grid-item" data-cp-grid-bg="light-grey">
+				  <p>Beef jerky venison pastrami bacon jowl andouille alcatra drumstick ground round pork turkey. Cow bacon venison andouille, chuck shank strip steak boudin tail short ribs spare ribs. Frankfurter doner kevin meatball, rump pork loin tail tri-tip brisket fatback swine pancetta beef ribs ham. Capicola ham pork, jerky prosciutto beef ribs cupim pig.</p>
+				</div>
+				<div class="cp-grid-item" data-cp-grid-bg="light-grey">
+				  <p>Beef turkey ground round strip steak fatback prosciutto hamburger salami.</p>
+				</div>
+				<div class="cp-grid-item" data-cp-grid-bg="light-grey">
+				  <p>Shankle ground round hamburger, cupim venison pastrami short ribs picanha turkey tri-tip t-bone cow ham hock. Beef ribs turducken kielbasa cupim porchetta short loin.</p>
+				</div>
 			</div>
-			<div class="cp-grid-item">
-			  <p>Beef jerky venison pastrami bacon jowl andouille alcatra drumstick ground round pork turkey. Cow bacon venison andouille, chuck shank strip steak boudin tail short ribs spare ribs. Frankfurter doner kevin meatball, rump pork loin tail tri-tip brisket fatback swine pancetta beef ribs ham. Capicola ham pork, jerky prosciutto beef ribs cupim pig.</p>
-			</div>
-			<div class="cp-grid-item">
-			  <p>Beef turkey ground round strip steak fatback prosciutto hamburger salami. Corned beef doner chuck, beef ribs chicken porchetta meatball alcatra. Meatball ham fatback landjaeger short ribs shankle pork chop shank meatloaf frankfurter sausage picanha flank strip steak.</p>
-			</div>
-			<div class="cp-grid-item">
-			  <p>Shankle ground round hamburger, cupim venison pastrami short ribs picanha turkey tri-tip t-bone cow ham hock. Beef ribs turducken kielbasa cupim porchetta short loin. Chicken bacon cow burgdoggen short loin, doner beef ribs rump tongue kielbasa andouille.</p>
-			</div>
-		</div>
+        </section>
 
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
+	<script>
+	$('#alignment-select').on('change', function() {
+      $('#alignment-example').attr('data-cp-grid-align', $(this).val());
+    });
+	</script>
 </body>
 </html>

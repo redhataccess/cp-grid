@@ -19,6 +19,10 @@
 		@include align-items(flex-end);
 	}
 
+	&[data-cp-grid-align="baseline"] {
+		@include align-items(baseline);
+	}
+
 	&[data-cp-grid-align="middle"],
 	&[data-cp-grid-align="center"] {
 		@include align-items(center);
