@@ -1,0 +1,17 @@
+$cp_text_color:			#333 !default;
+
+$cp_xs:					480px;
+$cp_sm:					768px;
+$cp_md:					992px;
+$cp_lg:					1200px;
+$cp_num_cols:			12 !default;
+
+$cp_grid_gutter:		30px !default;
+$cp_half_grid_gutter: 	$cp_grid_gutter / 2;
+
+$cp_card_colors:		(
+						// $color_name: ($bg_color, $text_color)
+						'light-grey': (#f0f0f0, $cp_text_color),
+						'medium-grey': (#d0d0d0, $cp_text_color),
+						'dark-grey': (#303030, #fff),
+					);

@@ -1,0 +1,87 @@
+// Setup
+@import "includes/variables";
+@import "includes/flexbox";
+@import "includes/cp-grid"; // required.
+
+// The Grid
+.cp-grid {
+	@include display-flex();
+	@include flex(1);
+	@include flex-wrap(wrap);
+	margin: 0 (-$cp_grid_gutter / 2);
+
+    // Alignment
+    &[data-cp-grid-align="top"] {
+		@include align-items(flex-start);
+	}
+
+	&[data-cp-grid-align="bottom"] {
+		@include align-items(flex-end);
+	}
+
+	&[data-cp-grid-align="middle"],
+	&[data-cp-grid-align="center"] {
+		@include align-items(center);
+	}
+}
+
+.cp-grid-item {
+	margin: 0 $cp_half_grid_gutter $cp_grid_gutter;
+	width: calc(100% - #{$cp_grid_gutter});
+
+	@include make-cp-grid-cols(); // make xs
+
+	// SM screens
+	@media (min-width: $cp_sm) {
+		@include make-cp-grid-cols('sm');
+	}
+
+	// MD screens
+	@media (min-width: $cp_md) {
+		@include make-cp-grid-cols('md');
+	}
+
+	// LG screens
+	@media (min-width: $cp_lg) {
+		@include make-cp-grid-cols('lg');
+	}
+
+	&[data-cp-grid-bg] {
+		padding: ($cp_grid_gutter - 1); // -1 for border.
+		border: 1px solid transparent; // for bordered card.
+	}
+
+	// Colors
+	@each $color, $value in $cp_card_colors {
+		&[data-cp-grid-bg="#{$color}"] {
+			background-color: nth($value, 1); // the bg color
+			border-color: nth($value, 1); // the bg color
+			color: nth($value, 2); // the text color
+		}
+	}
+
+    &[data-cp-grid-bg="bordered"] {
+      	background-color: transparent;
+		border-color: $cp_text_color;
+      	color: $cp_text_color;
+    }
+
+    // Alignment
+    &[data-cp-grid-align="top"] {
+		@include align-self(flex-start);
+	}
+
+	&[data-cp-grid-align="bottom"] {
+		@include align-self(flex-end);
+	}
+
+	&[data-cp-grid-align="middle"],
+	&[data-cp-grid-align="center"] {
+		@include align-self(center);
+	}
+
+    // Handle margin on bottom of <p>
+	p:last-child {
+		margin-bottom: 0;
+	}
+}

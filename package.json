@@ -1,0 +1,20 @@
+{
+  "name": "cp-grid",
+  "version": "1.0.0",
+  "description": "Customer Portal Grid System",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redhataccess/cp-grid.git"
+  },
+  "author": "Mark Caron",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/redhataccess/cp-grid/issues"
+  },
+  "homepage": "https://github.com/redhataccess/cp-grid#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "sass-flex-mixin": "^1.0.3"
+  }
+}

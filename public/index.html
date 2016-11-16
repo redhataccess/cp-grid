@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Customer Portal Grid System Demo</title>
+	<link href="css/cp-grid.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" rel="stylesheet">
+
+	<style>
+	* {
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+	}
+
+	body {
+		margin: 0;
+		padding: 30px 0 0;
+		font: 16px/1.5em 'Roboto', sans-serif;
+	}
+
+	.container {
+		margin: 0 auto;
+		padding: 0 15px;
+		max-width: 1170px;
+	}
+
+	h1 { font-size: 36px; margin: 0 0 1em; font-weight: normal; }
+	h2 { font-size: 28px; margin: 0; font-weight: normal; }
+	h3 { font-size: 21px; margin: 2em 0 0; font-weight: normal; }
+	</style>
+</head>
+<body>
+	<div class="container">
+
+		<h1>Customer Portal Grid System Demo
+		<h2>Standard Grid</h2>
+		<p>You can assign the column/grid widths directly to the grid wrapper itself using the data attribute <code>data-cp-grid</code>. Breakpoints work similarly to Bootstrap.</p>
+
+		<h3 class="subheading subheading-sm">Markup:</h3>
+		<pre class="code-block"><code class="language-markup">&lt;div class="cp-grid" data-cp-grid="sm-2 md-4"&gt;
+	&lt;div class="cp-grid-item"&gt;&lt;/div&gt;
+	&lt;div class="cp-grid-item"&gt;&lt;/div&gt;
+	&lt;div class="cp-grid-item"&gt;&lt;/div&gt;
+	&lt;div class="cp-grid-item"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+		<h3>Example:</h3>
+		<div class="cp-grid" data-cp-grid="sm-2 md-4">
+			<div class="cp-grid-item">
+			  <p>Bacon ipsum dolor amet ribeye tongue short loin fatback. Ham sausage drumstick shoulder biltong. Shank boudin capicola, hamburger pancetta ham flank biltong alcatra spare ribs. Burgdoggen bresaola boudin meatloaf pig. Pig ball tip brisket, filet mignon ribeye doner tail drumstick spare ribs shoulder short loin venison.</p>
+			</div>
+			<div class="cp-grid-item">
+			  <p>Beef jerky venison pastrami bacon jowl andouille alcatra drumstick ground round pork turkey. Cow bacon venison andouille, chuck shank strip steak boudin tail short ribs spare ribs. Frankfurter doner kevin meatball, rump pork loin tail tri-tip brisket fatback swine pancetta beef ribs ham. Capicola ham pork, jerky prosciutto beef ribs cupim pig.</p>
+			</div>
+			<div class="cp-grid-item">
+			  <p>Beef turkey ground round strip steak fatback prosciutto hamburger salami. Corned beef doner chuck, beef ribs chicken porchetta meatball alcatra. Meatball ham fatback landjaeger short ribs shankle pork chop shank meatloaf frankfurter sausage picanha flank strip steak.</p>
+			</div>
+			<div class="cp-grid-item">
+			  <p>Shankle ground round hamburger, cupim venison pastrami short ribs picanha turkey tri-tip t-bone cow ham hock. Beef ribs turducken kielbasa cupim porchetta short loin. Chicken bacon cow burgdoggen short loin, doner beef ribs rump tongue kielbasa andouille.</p>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
+</body>
+</html>

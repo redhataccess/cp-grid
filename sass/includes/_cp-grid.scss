@@ -1,0 +1,33 @@
+@import "variables";
+
+@mixin make-cp-grid-cols($screen: 'xs', $num_cols: $cp_num_cols) {
+
+	@for $i from 1 through $num_cols {
+		$size: (1 / $i) * 100%;
+
+		[data-cp-grid*="#{$screen}-#{$i}"] & { // to be nest in .cp-grid-item (&)
+			width: calc(#{$size} - #{$cp_grid_gutter});
+		}
+	}
+
+	@for $i from 1 through ($num_cols / 2) {
+		$size: ($i / $num_cols) * 100%;
+		$inverse_cols: 12 - $i;
+		$inverse_size: (1 - ($i / $num_cols)) * 100%;
+		$inverse_size_rnd: round($inverse_size);
+
+		&[data-cp-grid-size*="#{$screen}-#{$i}-cols"] {
+			width: calc(#{$size} - #{$cp_grid_gutter});
+		}
+
+		@if ($inverse_size_rnd != 0% and $inverse_size_rnd != 50%) {
+			&[data-cp-grid-size*="#{$screen}-#{$inverse_cols}-cols"] {
+				width: calc(#{$inverse_size} - #{$cp_grid_gutter});
+			}
+		}
+	}
+
+	&[data-cp-grid-size*="#{$screen}-12-cols"] {
+		width: calc(100% - #{$cp_grid_gutter});
+	}
+}
