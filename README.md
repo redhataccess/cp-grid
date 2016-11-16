@@ -39,7 +39,7 @@ The values of `data-cp-grid-size=""` define how many columns the respective *gri
 	<div class="cp-grid-item" data-cp-grid-bg="light-grey"></div>
 </div>
 ```
-Applying the `data-cp-grid-bg=""` attribute allows you to assign an approved background color. Use `none` for transparent.
+Applying the `data-cp-grid-bg=""` attribute allows you to assign an approved background color. Leave empty or use `none` for transparent.
 
 ## Development
 
