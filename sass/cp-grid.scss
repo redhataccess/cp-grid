@@ -33,23 +33,6 @@
 	margin: 0 $cp_half_grid_gutter $cp_grid_gutter;
 	width: calc(100% - #{$cp_grid_gutter});
 
-	@include make-cp-grid-cols(); // make xs
-
-	// SM screens
-	@media (min-width: $cp_sm) {
-		@include make-cp-grid-cols('sm');
-	}
-
-	// MD screens
-	@media (min-width: $cp_md) {
-		@include make-cp-grid-cols('md');
-	}
-
-	// LG screens
-	@media (min-width: $cp_lg) {
-		@include make-cp-grid-cols('lg');
-	}
-
 	&[data-cp-grid-bg] {
 		padding: ($cp_grid_gutter - 1); // -1 for border.
 		border: 1px solid transparent; // for bordered card.
@@ -88,4 +71,22 @@
 	p:last-child {
 		margin-bottom: 0;
 	}
+}
+
+// XS screens
+@include make-cp-grid-cols(); // make xs
+
+// SM screens
+@media (min-width: $cp_sm) {
+	@include make-cp-grid-cols('sm');
+}
+
+// MD screens
+@media (min-width: $cp_md) {
+	@include make-cp-grid-cols('md');
+}
+
+// LG screens
+@media (min-width: $cp_lg) {
+	@include make-cp-grid-cols('lg');
 }
